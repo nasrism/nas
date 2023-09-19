@@ -17,7 +17,9 @@ The reason I want to be a front-end developer:
 Yup! That's all for now! 
 
 Hope you enjoy my portfolio and keep in touch with me!
+
 /////////////////////////////////////////////////////////////////////////
+
 Hello! Apa khabar!
 
 Selamat datang ke portfolio saya 🎊
