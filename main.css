@@ -2,9 +2,20 @@
     border:1px solid red;
     scroll-behavior: smooth;
     margin:0px;
+    background-color: #240046;
+    color:#f2f2f2;
+}
+
+html{
+  scroll-behavior: smooth;
+  
 }
 
 /*top navigation*/
+::-webkit-scrollbar {
+  width: 0;
+}
+
 .topnav {
     position: sticky;
     width:100vw;
@@ -24,14 +35,21 @@
   }
   
   .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #FF9E00;
+    color: #240046;
   }
   
   .topnav a.active {
     float: left;
-    background-color: #04AA6D;
-    color: white;
+    background-color: #FF6D00;
+    color: #240046;
+  }
+
+  
+  .topnav a.active:hover {
+    float: left;
+    background-color: #FF9E00;
+    color: #240046;
   }
   
   .topnav .icon {
@@ -72,15 +90,35 @@ img{
     width:100vw;
     height:100vh;
     display:flex;
-    justify-content: center;
+    justify-content:space-evenly;
     align-items: center;
 }
 
 .intro{
-    flex-basis: 3;
+    flex-basis: 2;
 }
 
 .profile{
     flex-basis: 1;
 }
 
+/*about (where I live, education bg, why I want to be a front-end developer, where I learn, my strength)*/
+#about{
+  width:100vw;
+  height:100vh;
+  background-color: #9D4EDD;
+
+}
+/*work (fyp)*/
+#work{
+  width:100vw;
+  height:100vh;
+
+}
+
+/*contact (acc/number/resume)*/
+#contact{
+  width:100vw;
+  height:100vh;
+  background-color: #9D4EDD;
+}
