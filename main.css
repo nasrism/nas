@@ -1,19 +1,22 @@
 *{
-    border:1px solid red;
-    scroll-behavior: smooth;
+    /* border:1px solid red; */
     margin:0px;
-    background-color: #240046;
-    color:#f2f2f2;
 }
 
 html{
   scroll-behavior: smooth;
-  
+}
+
+body{
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 19px;
+  color:blue; /*#f2f2f2*/
 }
 
 /*top navigation*/
 ::-webkit-scrollbar {
   width: 0;
+  height: 0;
 }
 
 .topnav {
@@ -78,6 +81,15 @@ html{
     }
   }
 
+/*global class*/
+.title{
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+p, a{
+  font-weight: 200;
+}
 /*home page*/  
 img{
     width: 300px;
@@ -108,34 +120,95 @@ img{
   flex-direction: column;
   justify-content:center;
   align-items: center;
+  gap: 3vmin;
   width:100vw;
   height:100vh;
   background-color: #9D4EDD;
 }
 
+#about>.title{
+  margin: 10vmin;
+}
+
 .qna{
+  background-color: #240046;
+  position: relative;
   display:flex;
-  border-radius: 100%;
+  flex-wrap: wrap;
+  border-radius: 20vmin;
+  width:80vw;
+  height:7vh;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.qna-content{
+  text-align: center;
+  align-items: center;
+  background-color: transparent;
 }
 
 .question{
-  float: left;
-  display:flex;
+  max-width: 70vw;
+  color: #f2f2f2;
+}
+
+.qna>h1{
+  align-self: baseline;
+  margin:15px;
+  z-index: 3;
+  transform: translate(0%,0%);
+}
+
+.qna-side{
+  position: absolute;
+  border-radius: 20vmin;
+  width:7vh;
+  height:7vh;
+}
+
+.a-left{
+background-color: #240046;
+z-index: 3;
 }
 
 .answer{
-  float: right;
-  display:flex;
+  position: absolute;
+  display: grid;
+  justify-content: center;
+  background-color: #f2f2f2;
+  border-radius: 20vmin;
+  width:70%;
+  padding: 0px 15% 0px 15%;
+  height:7vh;
+  text-align: center;
+  transition: transform 500ms ease-in-out;
+  transform: translateX(95%);
+  color: #240046;
+}
+
+.answer:hover{
+  transform:translateX(0%);
+  z-index: 2;
+
+}
+
+
+.qna>h1:nth-child(4):hover{
+  transform: scale(0);
+  transition: none;
 }
 
 /*work (fyp)*/
-#work{
+#project{
   width:100vw;
   height:100vh;
 }
 
 .project{
-  overflow: scroll;
+  overflow:visible;
 }
 
 .project-detail{
