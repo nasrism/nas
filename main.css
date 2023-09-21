@@ -104,21 +104,48 @@ img{
 
 /*about (where I live, education bg, why I want to be a front-end developer, where I learn, my strength)*/
 #about{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
   width:100vw;
   height:100vh;
   background-color: #9D4EDD;
+}
 
+.qna{
+  display:flex;
+  border-radius: 100%;
+}
+
+.question{
+  float: left;
+  display:flex;
+}
+
+.answer{
+  float: right;
+  display:flex;
 }
 /*work (fyp)*/
 #work{
   width:100vw;
   height:100vh;
+}
 
+.project{
+  overflow: scroll;
+}
+
+.project-detail{
+  display:flex;
+  justify-content:center;
+  align-items: center;
 }
 
 /*contact (acc/number/resume)*/
 #contact{
   width:100vw;
-  height:100vh;
+  height:10vh;
   background-color: #9D4EDD;
 }
