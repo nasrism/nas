@@ -139,6 +139,7 @@ img{
 }
 
 .qna{
+  scale:clamp(0.5,1,1.5);
   background-color: var(--dark);
   position: relative;
   display:flex;
@@ -210,7 +211,7 @@ z-index: 0;
 }
 
 .answer>h1{
-  margin: 13px;
+  margin: 16px;
 }
 
 .answer:hover{
