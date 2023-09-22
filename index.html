@@ -9,107 +9,121 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/75b710a8ef.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
     <!--navigation bar-->
     <div class="topnav" id="myTopnav">
         <a href="#home" class="active">Nas</a>
-        <a href="#contact">Contact</a>
-        <a href="#project">Project</a>
-        <a href="#about">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-        </a>
+        <div class="invert">
+            <a href="#about">About</a>
+            <a href="#project">Project</a>
+            <a href="#contact">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>   
+        </div>
     </div>
 
-    <div id="home">
+    <div id="home" class="limit">
         <div class="intro">
             <h1>Hello there! my name is</h1>
             <h1 class="name">Nasrullah Ismail</h1>
-            <p>this is my portfolio and my first <strong>big</strong> project! And my journey as a Front-end developer.</p>
+            <p>This is my portfolio and my first <strong>big</strong> project!</p>
+            <p>This also my journey as a Front-end developer.</p>
         </div>
             <img src="" alt="Nasrullah Ismail picture" class="profile">
     </div>
 
-    <div id="about">
+    <div id="about" class="limit">
         <h2 class="title">Here's something about me</h2>
 
         <div class="qna">
-            <div class="qna-side a-left"></div>
-            <h1>Q</h1>
+            <div class="qna-side"></div>
+            <h1 class="q">Q</h1>
             
                 <div class="question qna-content">
                     <p>Where do you live?</p>
                 </div>
-                <h1>A</h1>
+                <h1 class="q-center">A</h1>
                 <div class="answer qna-content">
+                    <h1>A</h1>
                     <p>I live in Semanggol, Perak, Malaysia.</p>
+                    <h1>A</h1>
                 </div> 
         </div>
 
         
         <div class="qna">
-            <div class="qna-side a-left"></div>
-            <h1>Q</h1>
+            <div class="qna-side"></div>
+            <h1 class="q">Q</h1>
             
                 <div class="question qna-content">
                     <p>What your educational background?</p>
                 </div>
-                <h1>A</h1>
+                <h1 class="q-center">A</h1>
                 <div class="answer qna-content">
+                    <h1>A</h1>
                     <p>My highschool is SMK Gunung Semanggol, I continue my studies 
                 at Ungku Omar Polytechnic in diploma of elecrtric and electronic 
                 engineering, and attend some skills institute like Giatmara.</p>
+                <h1>A</h1>
                 </div> 
         </div>
 
         <div class="qna">
-            <div class="qna-side a-left"></div>
-            <h1>Q</h1>
+            <div class="qna-side"></div>
+            <h1 class="q">Q</h1>
             
                 <div class="question qna-content">
                     <p>Why you want to be a front-end developer?</p>
                 </div>
-                <h1>A</h1>
+                <h1 class="q-center">A</h1>
                 <div class="answer qna-content">
+                    <h1>A</h1>
                     <p>I love building something. Building a website
                 is one of the fastest way I can get to see the result of my work.
                 Plus, I love programming since highschool.</p>
+                <h1>A</h1>
                 </div> 
         </div>
 
         <div class="qna">
-            <div class="qna-side a-left"></div>
-            <h1>Q</h1>
+            <div class="qna-side"></div>
+            <h1 class="q">Q</h1>
             
                 <div class="question qna-content">
                     <p>Where do you learn to build a website?</p>
                 </div>
-                <h1>A</h1>
+                <h1 class="q-center">A</h1>
                 <div class="answer qna-content">
+                    <h1>A</h1>
                     <p>I learn it from various people, but to summerize it, I learn mostly
                 by youtube and explore the internet.</p>
+                <h1>A</h1>
                 </div> 
         </div>
 
         <div class="qna">
-            <div class="qna-side a-left"></div>
-            <h1>Q</h1>
+            <div class="qna-side"></div>
+            <h1 class="q">Q</h1>
             
                 <div class="question qna-content">
                     <p>What is your strength?</p>
                 </div>
-                <h1>A</h1>
+                <h1 class="q-center">A</h1>
                 <div class="answer qna-content">
+                    <h1>A</h1>
                     <p>I can easily understand new thing I learn, I love problem solving,
                 I can work in a group and solo and I can accept a critique even if it's harsh.</p>
+                <h1>A</h1>
                 </div> 
         </div>
     </div>
 
-    <div id="project">
-        <h2 class="title">Here's some coding project I have made.</h2>
+    <div id="project" class="limit">
+        <h2 class="title">Here's some coding project I made</h2>
         <h3>Arduino programming</h3>
         <div class="project">
             <div class="justhrow">
@@ -127,12 +141,22 @@
     </div>
 
     <div id="contact">
-        <h2>Connect with me!</h2>
-            <a href="">Linkedin</a>
-            <a href="">Github</a>
-            <a href="">Codepen</a>
-            <a href="">Email</a>
-            <a href="">Whatsapp</a>
+        <div class="border">
+            <h2>Connect with me!</h2>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/nasrullah-ismail " target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/nasrism" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                <a href="https://codepen.io/nasrism-the-encoder" target="_blank"><i class="fa-brands fa-codepen"></i></a>
+                <a href="mailto:nasrullahismail010@gmail.com?subject=Your website is awesome!" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://wa.me/+60174900946/" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+            </div>
+            
+        </div>
+
+        <div class="border">
+            <h2>Heres my resume!</h2>
+            <a href=""><i class="fa-solid fa-file"></i></a>
+        </div>
     </div>
 
     <script src="main.js"></script>
