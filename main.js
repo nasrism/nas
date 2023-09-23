@@ -1,9 +1,7 @@
-function myFunction() {
-    let x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
+let navi = document.querySelector(".top-nav");
+
+navbar=()=>{
+  navi.dataset.nav=="close"?navi.dataset.nav="open":navi.dataset.nav="close";
+  console.log(navi.dataset.nav);
+}
   

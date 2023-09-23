@@ -14,15 +14,24 @@
 <body>
 
     <!--navigation bar-->
-    <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">Nas</a>
-        <div class="invert">
-            <a href="#about">About</a>
-            <a href="#project">Project</a>
-            <a href="#contact">Contact</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-            </a>   
+    <div class="top-nav" data-nav="close">
+        <div class="top-content">
+          <div class="limited-range">
+            <div class="logo">
+            <p>NAS</p>
+           </div>
+          <div class="hamb-nav" onclick=navbar()>
+          <span class="l-top line"></span>
+          <span class="l-mid line"></span>
+          <span class="l-low line"></span>
+          </div>
+        </div>
+          </div>
+          
+        <div class="top-sub-content">
+          <a href="#about" onclick=navbar()>About</a>
+          <a href="#projects" onclick=navbar()>Project</a>
+          <a href="#contact" onclick=navbar()>Contact</a>
         </div>
     </div>
 
@@ -122,7 +131,7 @@
         </div>
     </div>
 
-    <div id="project" class="limit">
+    <div id="projects" class="limit">
         <h2 class="title">Here's some coding project I made</h2>
         <h3>Arduino programming</h3>
         <div class="project">
