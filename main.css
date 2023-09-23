@@ -155,6 +155,7 @@ img{
 }
 
 .qna-content{
+  display: grid;
   align-items: center;
   background-color: transparent;
 }
@@ -165,7 +166,7 @@ img{
 }
 
 .qna>h1{
-  align-self: baseline;
+  align-self: center;
   margin:11px;
   transform: translate(0%,0%);
 }
@@ -173,8 +174,6 @@ img{
 .qna-side{
   position: absolute;
   border-radius: 20vmin;
-  width:7vh;
-  height:7vh;
 background-color: var(--dark);
 z-index: 3;
 width: 51px;
@@ -182,6 +181,8 @@ height:51px;
 }
 
 .q{
+  display: grid;
+  align-items: center;
   z-index: 3;
   color: var(--white);
 }
@@ -298,7 +299,23 @@ z-index: 0;
     /* home */
 
     /* about */
+#about{
+  gap:0vmin;
+}
 
+.qna{
+  scale:clamp(0.5,0.7,1);
+}
+
+.qna,.answer,.qna-side,.qna-content{
+  height:102px;
+  font-size: 3vmin;
+}
+
+.answer{
+  transform: translateX(90%);
+
+}
     /* project */
 
     /* contact */
