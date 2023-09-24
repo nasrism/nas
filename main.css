@@ -80,7 +80,7 @@ a{
       background-color: var(--dark);
        display:flex;
        flex-direction:column;
-       width:100vw;
+       width:103vw;
        height:10vh;
        padding:10px;
        justify-content:center;
@@ -182,7 +182,7 @@ a{
        flex-direction:column;
        text-align:center;
        margin:0px;
-       width:100vw+20px;
+       width:103vw;
        height:0vh;
        overflow: hidden;
        transition:all 300ms ease-in-out;
@@ -193,6 +193,11 @@ a{
        height:200px;
      }
      
+     .top-sub-content>a{
+      width: 103%;
+      transition: all 300ms ease-in-out;
+     }
+
      .top-sub-content>a:hover{
        background-color:var(--d-orange);
        color:var(--dark);
