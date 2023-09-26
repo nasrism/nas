@@ -382,6 +382,7 @@ transform: translateX(-100%);
 opacity: 0;
 transition: all 500ms ease-in-out;
 position: relative;
+user-select: none;
 }
 
 .e-gen{
@@ -579,7 +580,7 @@ margin-bottom: 50px;
 .project{
   
   transition: transform 400ms ease;
-/* 
+
 &:hover{
 &.card_group{
   transform: scale(1);
@@ -603,10 +604,10 @@ margin-bottom: 50px;
 }
 }
 }
-} */
+}
 
 /*when hover on picture*/
-&:hover{
+&:active{
   position: fixed;
   top: 0;
   left: 0;
