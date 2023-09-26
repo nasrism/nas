@@ -66,7 +66,7 @@ function lazyLoadImages() {
 window.addEventListener('load', lazyLoadImages);
 
 // project slide
-const project = document.querySelectorAll(".project");
+const project = document.querySelectorAll(".card-content");
 const slideObserver = new IntersectionObserver(
   entries=>{
 entries.forEach(entry =>{

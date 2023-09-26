@@ -22,6 +22,7 @@ html{
 body{
   font-family: 'Fira Sans', sans-serif;
   font-size: 20px;
+  line-height: 20px;
   background-color: var(--bg-purple);
   color:var(--dark); /*#f2f2f2*/
   display: flex;
@@ -34,6 +35,8 @@ body{
 /*global class*/
 .title{
   font-size: 4rem;
+  line-height: 5.2rem;
+  letter-spacing: -0.08rem;
   font-weight: 700;
   text-align: center;
   color: var(--white);
@@ -47,7 +50,14 @@ h3{
   color: var(--h3-orange)
 }
 
+.q-center{
+  color: transparent;
+  z-index: 0;
+}
+
 p, a{
+  font-size: 1rem;
+  line-height: 1.4rem;
   font-weight: 200;
   color: var(--white);
 }
@@ -239,6 +249,11 @@ img{
 .intro{
   margin-left: 20px;
     flex-basis: 66%;
+    &>h1{
+      font-size: 4rem;
+      line-height: 5.2rem;
+      letter-spacing: -0.08rem;
+    }
 }
 
 .profile{
@@ -274,6 +289,9 @@ img{
   align-items: center;
   overflow: hidden;
   box-shadow: 0px 10px 7px -4px rgba(0,0,0,0.75);
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 500ms ease-in-out;
 }
 
 .qna-content{
@@ -310,12 +328,6 @@ height:51px;
   color: var(--white);
 }
 
-
-
-.q-center{
-z-index: 0;
-}
-
 .answer{
   position: absolute;
   display: flex;
@@ -327,25 +339,24 @@ z-index: 0;
   max-width: 1080px;
   height:51px;
   text-align: center;
-  transition: transform 500ms ease-in-out;
-  transform: translateX(95%);
+  transition: all 500ms ease-in-out;
+  opacity:0;
   color: var(--dark);
-}
 
-.answer>p{
+&>p{
   max-width:84%;
   color: var(--dark);
 }
 
-.answer>h1{
+&>h1{
   margin: 16px;
   color: var(--dark);
 }
 
-.answer:hover{
-  transform:translateX(0%);
+&:hover{
+  opacity: 1;
   z-index: 2;
-
+}
 }
 
 /*work (fyp)*/
@@ -355,12 +366,6 @@ margin-top: 10vh;
 
 .h-unfix{
   height: fit-content;
-}
-
-.project-detail{
-  display:flex;
-  align-items: center;
-
 }
 
 .project{
@@ -375,13 +380,8 @@ height: 30vmin;
 transform: translateX(-100%);
 opacity: 0;
 transition: all 500ms ease-in-out;
+position: relative;
 }
-
-  /* Apply the animation to the project's animation container */
-  #projects>.slide{
-      transform: translateX(0);
-      opacity: 1;
-  }
 
 .e-gen{
 margin-bottom: 50px;
@@ -405,8 +405,9 @@ margin-bottom: 50px;
   width:30vmin;
 }
 
-.card_group,.big_card,.little_card{
+.card_group,.big_card{
   aspect-ratio: 5 / 7;
+  z-index: 9;
 }
 
 .big_card>img{
@@ -431,66 +432,45 @@ margin-bottom: 50px;
   background-size: cover;
   z-index: 10;
  background-color:rgba(0, 0, 0, 0.1);
- 
-}
-
-.big_card{
   border-radius: 1vmin;
-}
 
-.big_card:nth-child(1){
+&:nth-child(1){
   transform: translateX(-10%) rotate(-1deg);
 }
 
-.big_card:nth-child(2){
+&:nth-child(2){
   transform: rotate(2deg);
 }
 
-.big_card:nth-child(3){
+&:nth-child(3){
   transform: translateX(-6%) rotate(-3deg);
 }
 
-.big_card:nth-child(4){
+&:nth-child(4){
   transform: translate(10%,3%) rotate(5deg);
+}
 }
 
 /*when hover on picture*/
 .card_group:hover{
   cursor: pointer;
   transform: scale(1.5);
-}
 
-.pic-left:hover > .big_card:nth-child(4){
-  transform: translate(-278%,-16%) rotate(-22deg);
-}
-
-.pic-left:hover > .big_card:nth-child(3){
-  transform: translate(-165%,11%) rotate(-6deg);
-}
-
-.pic-left:hover > .big_card:nth-child(2){
-  transform: translate(-73%,3%) rotate(7deg);
-}
-
-.pic-left:hover > .big_card:nth-child(1){
-  transform: translate(-13%,-3%) rotate(9deg);
-}
-
-
-.pic-right:hover > .big_card:nth-child(4){
+& > .big_card:nth-child(4){
   transform: translate(278%,-16%) rotate(22deg);
 }
 
-.pic-right:hover > .big_card:nth-child(3){
-  transform: translate(165%,11%) rotate(6deg);
+& > .big_card:nth-child(3){
+  transform: translate(165%,-10%) rotate(6deg);
 }
 
-.pic-right:hover > .big_card:nth-child(2){
-  transform: translate(73%,3%) rotate(-7deg);
+& > .big_card:nth-child(2){
+  transform: translate(73%,1%) rotate(-7deg);
 }
 
-.pic-right:hover > .big_card:nth-child(1){
+& > .big_card:nth-child(1){
   transform: translate(13%,-3%) rotate(-9deg);
+}
 }
 /*contact (acc/number/resume)*/
 #contact{
@@ -510,8 +490,10 @@ margin-bottom: 50px;
   padding: 10px;
 }
 
-#contact>.border>a, #contact>.border>.links>a{
+#contact>.border{
+  & >a, &> .links>a{
   color:var(--d-orange);
+}
 }
 
 .border{
@@ -530,11 +512,13 @@ margin-bottom: 50px;
     /* global */
     .title{
       font-size: 1.5rem;
+      line-height: 1.95rem;
       width: 90vw;
     }
 
     h2{
       font-size: 1rem;
+      line-height: 1.3rem;
     }
     /* nav bar */
     .logo>a>img{
@@ -564,7 +548,8 @@ margin-bottom: 50px;
 
 .qna,.answer,.qna-side,.qna-content{
   height: 75px;
-  font-size: 0.6rem;
+  font-size: 0.5rem;
+  line-height: 0.65rem;
 }
 .qna-side{
   width:102px;
@@ -572,13 +557,15 @@ margin-bottom: 50px;
 }
 
 .answer{
-  transform: translateX(84%);
+  opacity: 0;
   width:100%;
 }
 
 .answer>p{
  max-width: 64%;
  text-align: center;
+ font-size: 0.6rem;
+ line-height: 0.78rem;
 }
 
 .question{
@@ -588,29 +575,84 @@ margin-bottom: 50px;
 .texts>p{
   display: none;
 }
+.project{
+  
+  transition: transform 400ms ease;
+
+&:hover{
+&.card_group{
+  transform: scale(1);
+  
+&.big_card{
+
+&:nth-child(1){
+  transform: translateX(-10%) rotate(-1deg);
+}
+
+&:nth-child(2){
+  transform: rotate(2deg);
+}
+
+&:nth-child(3){
+  transform: translateX(-6%) rotate(-3deg);
+}
+
+&:nth-child(4){
+  transform: translate(10%,3%) rotate(5deg);
+}
+}
+}
+}
 
 /*when hover on picture*/
+&:active{
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(30%);
+  flex-direction: column;
+    text-align:center;
+    height: 65vh;
+    z-index: 5;
 
-.card_group:active{
-  transform: scale(1.5);
+& .texts{
+  &> .yt-vid{
+    justify-content: center;
+  }
+  width:70%;
+  &>p{
+  display: block;
+  }
+}
+& .card_group{
+  scale: 0.5;
 }
 
-.pic-left:hover > .big_card:nth-child(4){
-  transform: translate(315%,0%) rotate(0deg);
+
+& .big_card:nth-child(1){
+  transform: translate(-100%,3%) rotate(-15deg);
 }
 
-.pic-left:hover > .big_card:nth-child(3){
-  transform: translate(210%,0%) rotate(0deg);
+& .big_card:nth-child(2){
+  transform: translate(-40%,-8%) rotate(-3deg);
 }
 
-.pic-left:hover > .big_card:nth-child(2){
-  transform: translate(105%,0%) rotate(0deg);
+& .big_card:nth-child(3){
+  transform: translate(40%,-8%) rotate(5deg);
 }
 
-.pic-left:hover > .big_card:nth-child(1){
-  transform: translate(0%,0%) rotate(0deg);
+& .big_card:nth-child(4){
+  transform: translate(100%,3%) rotate(15deg);
+}
+}
 }
     /* contact */
+  }
+
+  /* Apply the animation to the project's animation container */
+  .slide{
+      transform: translateX(0);
+      opacity: 1;
   }
 
   @keyframes colorful{
@@ -620,6 +662,4 @@ margin-bottom: 50px;
     100%{ 
       filter: hue-rotate(360deg);
     }
-  }
-
-  
+  } 
