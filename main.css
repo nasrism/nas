@@ -117,7 +117,7 @@ a{
       box-shadow: none;
       border-radius: 0px;
       aspect-ratio: auto;
-      scale: 0.4;
+      scale: 0.4; 
       cursor: pointer;
       width: 215px;
       margin-left: -66px;
@@ -129,7 +129,7 @@ a{
      }
      /*logo*/
      
-     
+     /* idk what happen, but github cannot see all the changes */
      
      .hamb-nav{
        position: relative;

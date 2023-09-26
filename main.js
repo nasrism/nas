@@ -15,7 +15,7 @@ function navbar() {
       nav.setAttribute('data-nav', 'open');
   }
 }
-
+// this also
 function navibar() {
   const nav = document.querySelector('.top-nav');
   const currentNavState = nav.getAttribute('data-nav');
