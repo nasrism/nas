@@ -578,7 +578,7 @@ margin-bottom: 50px;
 .project{
   
   transition: transform 400ms ease;
-
+/* 
 &:hover{
 &.card_group{
   transform: scale(1);
@@ -602,10 +602,10 @@ margin-bottom: 50px;
 }
 }
 }
-}
+} */
 
 /*when hover on picture*/
-&:active{
+&:hover{
   position: fixed;
   top: 0;
   left: 0;
