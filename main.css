@@ -30,6 +30,7 @@ body{
   overflow-x: hidden;
 }
 
+
 /*global class*/
 .title{
   font-size: 4rem;
@@ -112,10 +113,14 @@ a{
      }
      
      /*logo*/
-     .logo>a:hover{
-      color:var(--white);
+     .logo>a>img{
+      box-shadow: none;
+      border-radius: 0px;
+      aspect-ratio: auto;
+      scale: 0.4;
       cursor: pointer;
-      
+      width: 215px;
+      margin-left: -66px;
      }
 
      /*top background*/
@@ -136,7 +141,8 @@ a{
        scale:0.5;
      }
      
-     .hamb-nav:hover{
+     .hamb-nav:hover, .logo>a>img:hover{
+      animation: colorful 60s infinite;
       cursor: pointer;
      }
 
@@ -197,11 +203,12 @@ a{
        height:0vh;
        overflow: hidden;
        transition:all 300ms ease-in-out;
-       background: linear-gradient(180deg,rgba(36,0,70,1) 0%, rgba(36,0,70,0.5) 30%, rgba(36,0,70,0.5) 70%, rgba(0,212,255,0) 100%);
+       background-color: var(--dark);
+       border-radius: 0px 0px 5vmin 5vmin;
      }
      
      .top-nav[data-nav="open"]>.top-sub-content{
-       height:200px;
+       height:145px;
      }
      
      .top-sub-content>a{
@@ -342,8 +349,12 @@ z-index: 0;
 }
 
 /*work (fyp)*/
+#projects>.title{
+margin-top: 10vh;
+}
+
 .h-unfix{
-  height: auto;
+  height: fit-content;
 }
 
 .project-detail{
@@ -361,7 +372,16 @@ background-color: var(--card-purple);
 box-shadow: 0px 10px 3vmin rgba(0, 0, 0, 0.4);
 border-radius: 20vmin;
 height: 30vmin;
+transform: translateX(-100%);
+opacity: 0;
+transition: all 500ms ease-in-out;
 }
+
+  /* Apply the animation to the project's animation container */
+  #projects>.slide{
+      transform: translateX(0);
+      opacity: 1;
+  }
 
 .e-gen{
 margin-bottom: 50px;
@@ -516,6 +536,10 @@ margin-bottom: 50px;
     h2{
       font-size: 1rem;
     }
+    /* nav bar */
+    .logo>a>img{
+      margin-left: -36px;
+    }
     /* home */
     #home{
       flex-direction: column-reverse;
@@ -564,5 +588,38 @@ margin-bottom: 50px;
 .texts>p{
   display: none;
 }
+
+/*when hover on picture*/
+
+.card_group:active{
+  transform: scale(1.5);
+}
+
+.pic-left:hover > .big_card:nth-child(4){
+  transform: translate(315%,0%) rotate(0deg);
+}
+
+.pic-left:hover > .big_card:nth-child(3){
+  transform: translate(210%,0%) rotate(0deg);
+}
+
+.pic-left:hover > .big_card:nth-child(2){
+  transform: translate(105%,0%) rotate(0deg);
+}
+
+.pic-left:hover > .big_card:nth-child(1){
+  transform: translate(0%,0%) rotate(0deg);
+}
     /* contact */
   }
+
+  @keyframes colorful{
+    0%{
+      filter: hue-rotate(0deg);
+    }
+    100%{ 
+      filter: hue-rotate(360deg);
+    }
+  }
+
+  

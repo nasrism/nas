@@ -18,7 +18,7 @@
         <div class="top-content">
           <div class="limited-range">
             <div class="logo">
-            <a href="#home">NAS</a>
+            <a href="#home" onclick=navibar()><img src="./nas logo.webp" alt=""></a>
            </div>
           <div class="hamb-nav" onclick=navbar()>
           <span class="l-top line"></span>
@@ -28,11 +28,11 @@
         </div>
           </div>
           
-        <div class="top-sub-content">
-          <a href="#about" onclick=navbar()>About</a>
-          <a href="#projects" onclick=navbar()>Project</a>
-          <a href="#contact" onclick=navbar()>Contact</a>
-        </div>
+          <div class="top-sub-content">
+            <a data-target="#about" onclick="scrollToSection(this)">About</a>
+            <a data-target="#projects" onclick="scrollToSection(this)">Projects</a>
+            <a data-target="#contact" onclick="scrollToSection(this)">Contact</a>
+          </div>
     </div>
 
     <div id="home" class="limit">
@@ -138,16 +138,16 @@
 
             <a id="card_id" class="card_group pic-right" target="_blank">
                 <div class="big_card">
-                    <img src="./projects/justhrow/top blynk.png" alt="" loading="lazy">
+                    <img data-src="./projects/justhrow/top blynk.png" alt="" loading="lazy">
                 </div>
                 <div class="big_card">
-                    <img src="./projects/justhrow/top view.png" alt="" loading="lazy">
+                    <img data-src="./projects/justhrow/top view.png" alt="" loading="lazy">
                 </div>
                 <div class="big_card">
-                    <img src="./projects/justhrow/top open.png" alt="" loading="lazy">
+                    <img data-src="./projects/justhrow/top open.png" alt="" loading="lazy">
                 </div>
                 <div class="big_card">
-                    <img src="./projects/justhrow/front close.jpg" alt="" loading="lazy">
+                    <img data-src="./projects/justhrow/front close.jpg" alt="" loading="lazy">
                 </div>
             </a>
             <div class="texts">
@@ -166,16 +166,16 @@
         <div class="project nature-dryer">
             <a id="card_id" class="card_group pic-right" target="_blank">
                 <div class="big_card">
-                    <img src="./projects/nature dryer/front open.png" alt="" loading="lazy">
+                    <img data-src="./projects/nature dryer/front open.png" alt="" loading="lazy">
                 </div>
                 <div class="big_card">
-                    <img src="./projects/nature dryer/back top.png" alt="" loading="lazy">
+                    <img data-src="./projects/nature dryer/back top.png" alt="" loading="lazy">
                 </div>
                 <div class="big_card">
-                    <img src="./projects/nature dryer/blynk.png" alt="" loading="lazy">
+                    <img data-src="./projects/nature dryer/blynk.png" alt="" loading="lazy">
                 </div>
                 <div class="big_card">
-                    <img src="./projects/nature dryer/side close.png" alt="" loading="lazy">
+                    <img data-src="./projects/nature dryer/side close.png" alt="" loading="lazy">
                 </div>
             </a>
 
@@ -196,16 +196,16 @@
 
             <a id="card_id" class="card_group pic-right" target="_blank">
                 <div class="big_card">
-                    <img src="./projects/water electric generator/front view.png" alt="" loading="lazy">
+                    <img data-src="./projects/water electric generator/front view.png" alt="" loading="lazy">
                 </div>
                 <div class="big_card">
-                    <img src="./projects/water electric generator/blynk.png" alt="" loading="lazy">
+                    <img data-src="./projects/water electric generator/blynk.png" alt="" loading="lazy">
                 </div>
                 <div class="big_card">
-                    <img src="./projects/water electric generator/electronics.png" alt="" loading="lazy">
+                    <img data-src="./projects/water electric generator/electronics.png" alt="" loading="lazy">
                 </div>
                 <div class="big_card">
-                    <img src="./projects/water electric generator/top view.png" alt="" loading="lazy">
+                    <img data-src="./projects/water electric generator/top view.png" alt="" loading="lazy">
                 </div>
             </a>
             <div class="texts">
