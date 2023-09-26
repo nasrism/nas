@@ -271,6 +271,7 @@ img{
 }
 
 #about>.title{
+  margin-top: 10vh;
   margin-bottom: 10vmin;
 }
 
